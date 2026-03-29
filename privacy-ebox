@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - BoxWise</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 40px 20px; background-color: #fcfcfc; }
+        .container { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        h1 { color: #007AFF; font-size: 24px; border-bottom: 2px solid #f0f0f0; padding-bottom: 10px; }
+        h2 { margin-top: 30px; font-size: 18px; color: #444; }
+        p { margin-bottom: 15px; font-size: 15px; color: #666; }
+        .highlight { background-color: #fdfdfd; padding: 15px; border-left: 4px solid #007AFF; margin: 20px 0; font-size: 0.95em; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>BoxWise Privacy Policy</h1>
+        <p><strong>Effective Date: March 29, 2026</strong></p>
+        
+        <p>Welcome to BoxWise. This privacy policy explains our commitment to protecting your data through local technology and offline-first principles.</p>
+
+        <div class="highlight">
+            <strong>Privacy Core Summary:</strong> All data is stored exclusively on your local device. We never upload your data to any cloud servers. We do not collect, share, or track any personal information.
+        </div>
+
+        <h2>1. Information We Do NOT Collect</h2>
+        <p>We do not collect any personal data, including your name, email address, physical location, or any other personally identifiable information. No account registration is required to use BoxWise.</p>
+
+        <h2>2. On-Device Data Storage</h2>
+        <p>All inventories, spaces, and item details you create are stored locally in a SQLite database on your physical device. Your data stays with you and never leaves your phone unless you manually uninstall the app.</p>
+
+        <h2>3. Camera Access & On-Device AI</h2>
+        <p>Camera access is requested solely for the AI recognition feature. <strong>Image recognition is processed 100% locally on your device</strong>. No photos or visual data are ever transmitted to external servers for cloud processing.</p>
+
+        <h2>4. Third-Party Services & Ads</h2>
+        <p>BoxWise contains no third-party tracking, analytics, or advertisement SDKs. We do not monitor user behavior or sell user data to any third party.</p>
+
+        <h2>5. Your Rights & Data Deletion</h2>
+        <p>Since your info is entirely localized, you maintain absolute control over it. You can delete all your data instantly by clearing individual entries or uninstalling the app. We have no way to recover your data once deleted as we never had access to it.</p>
+
+        <h2>6. Contact Us</h2>
+        <p>If you have any questions or feedback regarding our privacy commitment, please reach out to our support team.</p>
+    </div>
+</body>
+</html>
