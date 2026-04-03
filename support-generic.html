@@ -3,82 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Support</title>
+    <title>Support - Screen Color</title>
     <style>
         :root {
-            --ios-blue: #007AFF;
-            --ios-bg: #F2F2F7;
-            --ios-card: #FFFFFF;
-            --ios-label: #000000;
-            --ios-secondary-label: #3C3C43;
-        }
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --ios-bg: #000000;
-                --ios-card: #1C1C1E;
-                --ios-label: #FFFFFF;
-                --ios-secondary-label: #EBEBF5;
-            }
+            --primary: #007AFF;
+            --bg: #F2F2F7;
+            --card: #FFFFFF;
+            --text: #1C1C1E;
+            --secondary: #8E8E93;
+            --accent: #FF9500;
         }
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: var(--ios-bg);
-            color: var(--ios-label);
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
             margin: 0;
-            padding: 20px;
-            display: flex;
-            justify-content: center;
+            padding: 40px 20px;
         }
         .container {
-            max-width: 800px;
-            width: 100%;
-            background-color: var(--ios-card);
+            max-width: 600px;
+            margin: 0 auto;
+            background: var(--card);
             padding: 40px;
             border-radius: 20px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            line-height: 1.6;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
         }
-        h1 { font-size: 34px; font-weight: 800; margin-bottom: 24px; color: var(--ios-blue); }
-        h2 { font-size: 22px; margin-top: 32px; border-bottom: 1px solid rgba(120, 120, 128, 0.2); padding-bottom: 8px; }
-        p, li { color: var(--ios-secondary-label); font-size: 17px; }
-        .footer { margin-top: 50px; text-align: center; font-size: 13px; opacity: 0.5; }
-        a { color: var(--ios-blue); text-decoration: none; }
-        .faq-item { margin-bottom: 20px; }
-        .faq-q { font-weight: 700; color: var(--ios-label); }
-        .lang-switch { text-align: right; margin-bottom: 20px; font-size: 14px; }
+        h1 { font-size: 28px; font-weight: 700; margin-bottom: 24px; text-align: center; }
+        .faq-item { margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid #EEE; }
+        h3 { font-size: 17px; font-weight: 600; color: var(--primary); margin-bottom: 4px; }
+        p { font-size: 15px; color: #555; }
+        .contact-box {
+            margin-top: 40px;
+            padding: 30px;
+            background: linear-gradient(135deg, #007AFF, #00C7BE);
+            color: white;
+            border-radius: 16px;
+            text-align: center;
+        }
+        .contact-box a { color: white; text-decoration: underline; font-weight: 700; }
+        .footer { text-align: center; margin-top: 32px; font-size: 13px; color: var(--secondary); }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="lang-switch">
-            <a href="support-generic-zh.html">中文</a>
-        </div>
-        <h1>Support</h1>
-        <p>Thank you for using our app! We are dedicated to providing the best experience for our users.</p>
+        <h1>Support - Screen Color</h1>
 
-        <h2>Contact Support</h2>
-        <p>If you have any questions, encounter bugs, or have suggestions for new features, please reach out via email:</p>
-        <p><a href="mailto:xshenff@gmail.com" style="font-size: 20px; font-weight: 600;">xshenff@gmail.com</a></p>
-
-        <h2>Frequently Asked Questions (FAQ)</h2>
-        
         <div class="faq-item">
-            <p class="faq-q">How do I change the language?</p>
-            <p>Go to the <strong>Settings</strong> page within the app and select your preferred language.</p>
+            <h3>Why does the app need camera access?</h3>
+            <p>The app calculates color temperature (Kelvin) by analyzing real-time light data via the camera sensor. No photos or videos are stored or shared.</p>
         </div>
 
         <div class="faq-item">
-            <p class="faq-q">Does the app need internet?</p>
-            <p>No, the app works entirely offline. No data is sent to any servers.</p>
+            <h3>How do I measure my screen's temperature?</h3>
+            <p>Point the camera at a neutral/white area of your display from a distance of about 10-30 cm. Keep the device steady for a few seconds for the reading to stabilize.</p>
         </div>
 
         <div class="faq-item">
-            <p class="faq-q">Why is there no sound?</p>
-            <p>Ensure your device's volume is up and the "Silent Mode" switch on your device is turned off. If problems persist, try restarting the app.</p>
+            <h3>Why is my Mac reading always 0 Kelvin?</h3>
+            <p>Some Mac built-in cameras do not support hardware white-balance readout. In this case, the app will automatically use its pixel-based calculation for an estimated result.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>How accurate are the results?</h3>
+            <p>On iPhones, the app leverages factory-calibrated hardware gains for high precision. On other systems, it uses the advanced CIE 1931 color science model.</p>
+        </div>
+
+        <div class="contact-box">
+            <p>Need further assistance or want to report a bug?</p>
+            <a href="mailto:xshenff@gmail.com">xshenff@gmail.com</a>
         </div>
 
         <div class="footer">
-            &copy; 2026. All rights reserved.
+            &copy; 2026 Screen Color App. Crafted for Professionals.
         </div>
     </div>
 </body>
