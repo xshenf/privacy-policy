@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>支持</title>
+    <style>
+        :root {
+            --ios-blue: #007AFF;
+            --ios-bg: #F2F2F7;
+            --ios-card: #FFFFFF;
+            --ios-label: #000000;
+            --ios-secondary-label: #3C3C43;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --ios-bg: #000000;
+                --ios-card: #1C1C1E;
+                --ios-label: #FFFFFF;
+                --ios-secondary-label: #EBEBF5;
+            }
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background-color: var(--ios-bg);
+            color: var(--ios-label);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background-color: var(--ios-card);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            line-height: 1.6;
+        }
+        h1 { font-size: 34px; font-weight: 800; margin-bottom: 24px; color: var(--ios-blue); }
+        h2 { font-size: 22px; margin-top: 32px; border-bottom: 1px solid rgba(120, 120, 128, 0.2); padding-bottom: 8px; }
+        p, li { color: var(--ios-secondary-label); font-size: 17px; }
+        .footer { margin-top: 50px; text-align: center; font-size: 13px; opacity: 0.5; }
+        a { color: var(--ios-blue); text-decoration: none; }
+        .faq-item { margin-bottom: 20px; }
+        .faq-q { font-weight: 700; color: var(--ios-label); }
+        .lang-switch { text-align: right; margin-bottom: 20px; font-size: 14px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="lang-switch">
+            <a href="support-generic.html">English</a>
+        </div>
+        <h1>支持</h1>
+        <p>感谢您使用我们的应用！我们致力于为用户提供最佳体验。</p>
+
+        <h2>联系支持</h2>
+        <p>如果您有任何问题、遇到错误或对新功能有建议，请通过电子邮件联系我们：</p>
+        <p><a href="mailto:xshenff@gmail.com" style="font-size: 20px; font-weight: 600;">xshenff@gmail.com</a></p>
+
+        <h2>常见问题（FAQ）</h2>
+        
+        <div class="faq-item">
+            <p class="faq-q">如何更改语言？</p>
+            <p>进入应用内的<strong>设置</strong>页面，选择您偏好的语言。</p>
+        </div>
+
+        <div class="faq-item">
+            <p class="faq-q">应用需要网络吗？</p>
+            <p>不需要，应用完全离线工作。不会向任何服务器发送数据。</p>
+        </div>
+
+        <div class="faq-item">
+            <p class="faq-q">为什么没有声音？</p>
+            <p>请确保您的设备音量已调高，并且设备的"静音模式"开关已关闭。如果问题仍然存在，请尝试重启应用。</p>
+        </div>
+
+        <div class="footer">
+            &copy; 2026. 保留所有权利。
+        </div>
+    </div>
+</body>
+</html>
