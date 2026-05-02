@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Support — FocusPipe</title>
+<style>
+  :root {
+    --bg: #ffffff;
+    --fg: #1a1a1a;
+    --muted: #6b6b6b;
+    --accent: #5e5cff;
+    --border: #e5e5e7;
+    --code-bg: #f5f5f7;
+    --card-bg: #fafafa;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0f1117;
+      --fg: #e8e8ec;
+      --muted: #8e8e93;
+      --accent: #8d8aff;
+      --border: #2a2d36;
+      --code-bg: #1a1d24;
+      --card-bg: #161922;
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--fg);
+    line-height: 1.65;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+  }
+  main {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 48px 24px 96px;
+  }
+  header {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 16px;
+    margin-bottom: 32px;
+  }
+  h1 {
+    font-size: 32px;
+    margin: 0 0 8px;
+    letter-spacing: -0.02em;
+  }
+  h2 {
+    font-size: 22px;
+    margin: 40px 0 12px;
+    letter-spacing: -0.01em;
+  }
+  h3 {
+    font-size: 17px;
+    margin: 24px 0 8px;
+  }
+  p { margin: 0 0 14px; }
+  ul, ol { padding-left: 22px; margin: 0 0 14px; }
+  li { margin-bottom: 6px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    background: var(--code-bg);
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-size: 0.92em;
+  }
+  .meta { color: var(--muted); font-size: 14px; }
+  .quick {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 16px 0 24px;
+  }
+  .quick a {
+    display: inline-block;
+    padding: 8px 14px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    color: var(--fg);
+    background: var(--card-bg);
+    font-size: 14px;
+  }
+  .quick a:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    text-decoration: none;
+  }
+  details {
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin-bottom: 10px;
+    background: var(--card-bg);
+  }
+  details[open] { background: var(--bg); }
+  summary {
+    cursor: pointer;
+    font-weight: 600;
+    list-style: none;
+    outline: none;
+  }
+  summary::-webkit-details-marker { display: none; }
+  summary::before {
+    content: "+";
+    display: inline-block;
+    width: 18px;
+    color: var(--accent);
+    font-weight: 700;
+  }
+  details[open] summary::before { content: "−"; }
+  details > p, details > ul { margin-top: 12px; }
+  .nav {
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 14px;
+  }
+  .nav a { margin-right: 16px; }
+  .contact-card {
+    margin-top: 24px;
+    padding: 20px 24px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--card-bg);
+  }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>FocusPipe — Support</h1>
+    <p class="meta">Help, FAQ, and how to reach us.</p>
+  </header>
+
+  <div class="quick">
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="https://apps.apple.com/account/subscriptions" target="_blank" rel="noopener">Manage Subscription</a>
+    <a href="mailto:xshenff@gmail.com">Email Support</a>
+    <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">Refund (Apple)</a>
+  </div>
+
+  <h2>What is FocusPipe?</h2>
+  <p>FocusPipe helps people with ADHD (or anyone who struggles with task initiation) move from <em>knowing</em> to <em>doing</em>. It uses AI to break overwhelming tasks into very small, action-verb-led micro-steps that adapt to your current energy level (High / Medium / Low).</p>
+
+  <h2>Getting Started</h2>
+  <ol>
+    <li>On first launch, choose your current energy level.</li>
+    <li>Add a task you&rsquo;ve been avoiding (e.g., &ldquo;Clean desk&rdquo;).</li>
+    <li>Tap <strong>Break it down</strong> &mdash; AI returns 3–7 micro-steps, each with an action verb and time estimate.</li>
+    <li>Focus on one step at a time. Tap <em>Too Hard</em> on any step to refine it further.</li>
+    <li>Stuck choosing? Use <strong>Decision Rescue</strong> to randomly pick a task weighted by priority and energy match.</li>
+    <li>Overwhelmed by thoughts? Use <strong>Brain Dump</strong> &mdash; write freely, AI extracts actionable items.</li>
+  </ol>
+
+  <h2>Frequently Asked Questions</h2>
+
+  <h3>General</h3>
+
+  <details>
+    <summary>Does FocusPipe work without internet?</summary>
+    <p>Yes. The on-device rule engine handles task breakdown, decision rescue, and brain dump processing entirely offline. AI-enhanced breakdown requires an internet connection.</p>
+  </details>
+
+  <details>
+    <summary>Where is my data stored?</summary>
+    <p>All your tasks, micro-steps, energy logs, and streak history are stored on your device using Apple&rsquo;s SwiftData. Nothing is uploaded for storage.</p>
+  </details>
+
+  <details>
+    <summary>Does the AI see my personal information?</summary>
+    <p>No. When you use cloud AI features, only the task or brain dump text is sent. We do not send your name, email, Apple ID, device ID, or any other identifier. The text is processed in memory and not retained.</p>
+  </details>
+
+  <details>
+    <summary>How do I switch to fully offline mode?</summary>
+    <p>Open <code>Settings → AI Engine</code> and select <strong>On-Device Rule Engine</strong>. With this setting, no text leaves your device.</p>
+  </details>
+
+  <details>
+    <summary>What languages does FocusPipe support?</summary>
+    <p>The interface is currently in English. Task input can be in any language; AI quality is best in English and Simplified Chinese.</p>
+  </details>
+
+  <h3>Subscription</h3>
+
+  <details>
+    <summary>How much does Pro cost?</summary>
+    <p>$4.99 per month or $49.99 per year (51% savings). Both plans renew automatically until cancelled.</p>
+  </details>
+
+  <details>
+    <summary>What does Pro unlock?</summary>
+    <ul>
+      <li>Unlimited daily access to Micro Flows, Decision Rescue, and Brain Dump (subject to fair use)</li>
+      <li>AI-enhanced breakdown with smarter step granularity</li>
+      <li>Detailed weekly progress reports</li>
+      <li>Data export (CSV / JSON)</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>How do I restore a purchase on a new device?</summary>
+    <p>Open the paywall (<code>Settings → Pro Status → Upgrade</code>) and tap <strong>Restore Purchases</strong>, or sign in with the same Apple ID and reopen <code>Settings → Pro Status</code>.</p>
+  </details>
+
+  <details>
+    <summary>How do I cancel my subscription?</summary>
+    <p>iOS Settings app → tap your name → <strong>Subscriptions</strong> → <strong>FocusPipe</strong> → <strong>Cancel Subscription</strong>. Cancellation takes effect at the end of your current billing period; you keep Pro access until then.</p>
+  </details>
+
+  <details>
+    <summary>What does &ldquo;fair use&rdquo; mean for Pro?</summary>
+    <p>Pro removes daily caps for normal personal use. To prevent abuse, requests are limited to about 20 per minute and 500 per day per device. Genuine personal use will never come close to these limits. Sharing credentials or automating requests via scripts is not permitted.</p>
+  </details>
+
+  <details>
+    <summary>Will I get a refund if I cancel mid-period?</summary>
+    <p>All refunds are handled by Apple. Visit <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a> to request one.</p>
+  </details>
+
+  <h3>Troubleshooting</h3>
+
+  <details>
+    <summary>AI breakdown failed. What should I do?</summary>
+    <p>Tap <strong>Use Local Engine</strong> in the error dialog to fall back to the on-device rule engine. If the issue persists, check your internet connection or try again in a few minutes — the backend may be temporarily rate-limiting due to high demand.</p>
+  </details>
+
+  <details>
+    <summary>I see &ldquo;Authentication failed&rdquo;.</summary>
+    <p>This usually means your App Store receipt needs to be refreshed. Force-quit the app and relaunch. If the problem continues, restore purchases from <code>Settings → Pro Status</code> or contact us.</p>
+  </details>
+
+  <details>
+    <summary>My streak reset unexpectedly.</summary>
+    <p>Streaks reset if you skip a day. They are stored locally — make sure your device clock is accurate. If you believe this is a bug, please email us with the date you last completed a task.</p>
+  </details>
+
+  <details>
+    <summary>Notifications aren&rsquo;t arriving.</summary>
+    <p>Open the iOS Settings app → <strong>FocusPipe</strong> → <strong>Notifications</strong> and confirm they are enabled. Inside FocusPipe, go to <code>Settings → Notifications</code> and verify the toggles are on.</p>
+  </details>
+
+  <details>
+    <summary>How do I export all my data?</summary>
+    <p><code>Settings → Data → Export Data</code>, then choose JSON or CSV. The export uses iOS Share Sheet so you can save to Files, email, or any cloud service.</p>
+  </details>
+
+  <details>
+    <summary>How do I clear all data?</summary>
+    <p><code>Settings → Data → Clear All Data</code>. This is irreversible; export first if you want a backup.</p>
+  </details>
+
+  <h3>Privacy</h3>
+
+  <details>
+    <summary>Do you sell my data?</summary>
+    <p>No. We do not sell, share, or rent any user data.</p>
+  </details>
+
+  <details>
+    <summary>Do you use third-party analytics?</summary>
+    <p>No. We have no analytics SDKs, ad networks, attribution providers, social SDKs, or off-device crash reporters.</p>
+  </details>
+
+  <details>
+    <summary>Can I see exactly what data the app holds?</summary>
+    <p>Open <code>Settings → Privacy Dashboard</code>. It shows the count of every data type stored locally and explains what (if anything) is sent to our backend.</p>
+  </details>
+
+  <h2>Contact</h2>
+  <div class="contact-card">
+    <p><strong>Email:</strong> <a href="mailto:xshenff@gmail.com">xshenff@gmail.com</a></p>
+    <p><strong>Response time:</strong> typically within 2 business days.</p>
+    <p>When emailing, please include your iOS version, app version (<code>Settings → Privacy &amp; About → Version</code>), and a clear description of the issue. We appreciate your patience and feedback.</p>
+  </div>
+
+  <nav class="nav">
+    <a href="privacy-focus.html">Privacy Policy</a>
+    <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener">Terms of Use (EULA)</a>
+  </nav>
+</main>
+</body>
+</html>
