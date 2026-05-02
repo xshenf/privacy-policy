@@ -147,7 +147,12 @@
   </ul>
 
   <h3>2.2 Sent to our backend (transient, not stored)</h3>
-  <p>When you opt in to cloud AI features (task breakdown, re-breakdown, brain dump), the following text is sent over HTTPS to our backend at <code>api.xmin.site</code>:</p>
+  <p>The app supports two AI engines, selectable in <code>Settings → AI Engine</code>:</p>
+  <ul>
+    <li><strong>On-Device AI</strong> (Apple Intelligence, iOS 26+ on supported devices): the language model runs entirely on your iPhone. <strong>No text leaves your device.</strong></li>
+    <li><strong>Cloud AI</strong>: text is sent to our backend at <code>api.xmin.site</code> over HTTPS for processing.</li>
+  </ul>
+  <p>When (and only when) you opt in to <strong>Cloud AI</strong>, the following text is sent over HTTPS:</p>
   <ul>
     <li>Task description (e.g., &ldquo;Clean my desk&rdquo;)</li>
     <li>Step instruction (when refining a step)</li>
