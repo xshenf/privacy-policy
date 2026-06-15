@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support & FAQ - BiCamera</title>
+    <style>
+        :root {
+            --bg-color: #0b0b0f;
+            --card-bg: rgba(255, 255, 255, 0.03);
+            --border-color: rgba(255, 255, 255, 0.08);
+            --text-primary: #ffffff;
+            --text-secondary: #a1a1aa;
+            --accent-color: #3b82f6;
+            --accent-gradient: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+            --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            font-family: var(--font-family);
+            line-height: 1.6;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 24px;
+            padding: 48px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(20px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            top: -10%;
+            left: -10%;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.12) 0%, transparent 70%);
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .container::after {
+            content: '';
+            position: absolute;
+            bottom: -10%;
+            right: -10%;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(139, 92, 246, 0.12) 0%, transparent 70%);
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        header {
+            margin-bottom: 40px;
+            text-align: center;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 24px;
+        }
+
+        .logo-container {
+            width: 72px;
+            height: 72px;
+            background: var(--accent-gradient);
+            border-radius: 18px;
+            margin: 0 auto 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 8px 16px rgba(59, 130, 246, 0.3);
+        }
+
+        .logo-icon {
+            width: 36px;
+            height: 36px;
+            fill: #ffffff;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 8px;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin: 32px 0 16px;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h2::before {
+            content: '';
+            display: inline-block;
+            width: 4px;
+            height: 18px;
+            background: var(--accent-gradient);
+            border-radius: 2px;
+        }
+
+        p {
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+            font-size: 1.05rem;
+        }
+
+        /* FAQ Style */
+        .faq-item {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 16px;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .faq-item:hover {
+            transform: translateY(-2px);
+            border-color: rgba(255, 255, 255, 0.15);
+        }
+
+        .faq-question {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+
+        .faq-answer {
+            color: var(--text-secondary);
+            font-size: 0.98rem;
+        }
+
+        /* Form Style */
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-top: 24px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        label {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        input, textarea {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 12px 16px;
+            color: #ffffff;
+            font-family: var(--font-family);
+            font-size: 1rem;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        button.btn-submit {
+            background: var(--accent-gradient);
+            border: none;
+            border-radius: 8px;
+            color: #ffffff;
+            font-size: 1rem;
+            font-weight: 700;
+            padding: 14px;
+            cursor: pointer;
+            transition: opacity 0.2s, transform 0.1s;
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
+            margin-top: 8px;
+        }
+
+        button.btn-submit:hover {
+            opacity: 0.95;
+            transform: translateY(-1px);
+        }
+
+        button.btn-submit:active {
+            transform: translateY(0);
+        }
+
+        .contact-email-card {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, rgba(139, 92, 246, 0.05) 100%);
+            border: 1px dashed rgba(59, 130, 246, 0.3);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            margin-top: 28px;
+        }
+
+        .contact-email-card a {
+            color: var(--accent-color);
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .footer {
+            margin-top: 48px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        .footer a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+            .container {
+                padding: 24px;
+                border-radius: 16px;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            h2 {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-container">
+                <svg class="logo-icon" viewBox="0 0 24 24">
+                    <path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4zM14 13h-3v3H9v-3H6v-2h3V8h2v3h3v2z"/>
+                </svg>
+            </div>
+            <h1>BiCamera Support Center</h1>
+            <p>Need help or have suggestions? We are here to support you.</p>
+        </header>
+
+        <section>
+            <h2>Frequently Asked Questions (FAQ)</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">Why does the camera preview say "Compatibility Mode"?</div>
+                <div class="faq-answer">Apple's multi-camera recording requires A12 Bionic or newer processors. On older iOS devices (or the iOS Simulator), BiCamera automatically enters Compatibility Mode, rendering a single-camera composite feed. This ensures the app is stable on all devices.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Where are my recorded videos and photos saved?</div>
+                <div class="faq-answer">They are saved directly to your native Apple Photo Library. You can view them either inside BiCamera's internal Gallery or through Apple's native "Photos" app.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How does the free trial recording work?</div>
+                <div class="faq-answer">BiCamera offers 3 free video recordings to let you experience the front and back lens fusion. Once the limit is reached, you can purchase the BiCamera Pro Unlock (a one-time purchase with no subscription) for unlimited recording.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">I bought BiCamera Pro on another iPhone. Do I need to buy it again?</div>
+                <div class="faq-answer">No! You can restore your purchases for free. Simply open the Pro Paywall inside BiCamera and tap "Restore Purchases" at the bottom of the screen. Make sure you are logged into the same Apple ID.</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Contact Support</h2>
+            <p>If your issue is not listed above, please fill out the contact form below or email us directly.</p>
+
+            <form class="contact-form" action="#" method="POST" onsubmit="alert('Thank you for contacting us! We will get back to you shortly.'); return false;">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Your Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Describe your issue or feedback</label>
+                    <textarea id="message" name="message" placeholder="Please specify your device model and iOS version..." required></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Submit Ticket</button>
+            </form>
+
+            <div class="contact-email-card">
+                <p>Prefer direct email? Contact us at:</p>
+                <p><a href="mailto:support@xmin.site">support@xmin.site</a></p>
+            </div>
+        </section>
+
+        <div class="footer">
+            <p>&copy; 2026 BiCamera. All rights reserved.</p>
+            <p><a href="privacy-bic.html">Privacy Policy</a></p>
+        </div>
+    </div>
+</body>
+</html>
